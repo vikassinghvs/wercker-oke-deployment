@@ -7,7 +7,7 @@ build:
     - script:
         code: |
           echo "USERNAME is $USERNAME"
-          export IMAGE_BASE="new-wercker-nginx"
+          export IMAGE_BASE="new-wercker-nginx05"
           echo $WERCKER_RUN_ID$IMAGE_BASE
           export IMAGE_ID=$WERCKER_RUN_ID$IMAGE_BASE
           echo "Image is $IMAGE_ID"
@@ -40,7 +40,7 @@ build:
     - script:
          code: |
            echo "Testing the container.."
-           export CNT="test-container"
+           export CNT="test-container05"
            echo $WERCKER_RUN_ID$CNT
            export CNT_NAME=$WERCKER_RUN_ID$CNT
            echo "CONTAINER NAME is $CNT_NAME"
@@ -67,7 +67,7 @@ build:
           custom_message: Deploying $WERCKER_GIT_BRANCH to $WERCKER_DEPLOYTARGET_NAME ($WERCKER_DEPLOY_URL) 
 
 
-deploy-to-minikube:
+deploy-to-oke:
   box:
         id: alpine
         cmd: /bin/sh
