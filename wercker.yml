@@ -7,7 +7,7 @@ build:
     - script:
         code: |
           echo "USERNAME is $USERNAME"
-          export IMAGE_BASE="new-wercker-nginx05"
+          export IMAGE_BASE="new-wercker-nginx"
           echo $WERCKER_RUN_ID$IMAGE_BASE
           export IMAGE_ID=$WERCKER_RUN_ID$IMAGE_BASE
           echo "Image is $IMAGE_ID"
@@ -40,7 +40,7 @@ build:
     - script:
          code: |
            echo "Testing the container.."
-           export CNT="test-container05"
+           export CNT="test-container"
            echo $WERCKER_RUN_ID$CNT
            export CNT_NAME=$WERCKER_RUN_ID$CNT
            echo "CONTAINER NAME is $CNT_NAME"
